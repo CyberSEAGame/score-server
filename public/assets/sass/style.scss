@@ -1,0 +1,351 @@
+@import "compass";
+@import "compass/reset/";
+
+$bgcolor: #000;
+$font-color: #6f6;
+$error-font-color: #f33;
+$main-font-size: 18px;
+$title-font-size: 30px;
+$main-width: 90%;
+
+@font-face{
+  font-family: 'Coda';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Coda-Regular.ttf') format('truetype');
+}
+
+body{
+  background-color: $bgcolor;
+  color: $font-color;
+  font-size: $main-font-size;
+  font-family: 'Coda', cursive;
+}
+
+a{
+  text-decoration: none;
+  color: $font-color;
+}
+
+a:hover{
+  opacity: 0.6;
+}
+
+header{
+  border-top: dotted $font-color 1px;
+  border-bottom: dotted $font-color 1px;
+  @include clearfix;
+  li{
+    padding: 10px 0 10px 0;
+    float: left;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.container{
+  width: $main-width;
+  margin: 10px auto;
+}
+
+section{
+  padding: 20px 20px;
+}
+
+h1{
+  font-size: $title-font-size;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer{
+  margin-top: 30px;
+  text-align: center;
+  p{
+    padding: 5px;
+    border-top: dotted $font-color 1px;
+    border-bottom: dotted $font-color 1px;
+  }
+}
+
+button{
+  cursor: pointer;
+  display: block;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+.normal-button{
+  display: block;
+  text-align: center;
+  background-color: $bgcolor;
+  border: dotted $font-color 1px;
+  color: $font-color;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.logout{
+  float: right;
+  margin-right: 30px;
+}
+
+label{
+  display: block;
+  float: left;
+  width: 150px;
+  height: 30px;
+  line-height: 20px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+input{
+  background-color: $bgcolor;
+  color: $font-color;
+  border: dotted $font-color 1px;
+}
+
+select{
+  background-color: $bgcolor;
+  color: $font-color;
+  border: dotted $font-color 1px;
+}
+
+textarea{
+  background-color: $bgcolor;
+  color: $font-color;
+  border: dotted $font-color 1px;
+}
+
+.normal-form{
+  width: 500px;
+  margin: 0 auto;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+.error{
+  text-align: center;
+  color: $error-font-color;
+  padding: 10px;
+}
+
+.solved-text{
+  text-align: center;
+  color: #FFFF00;
+  padding: 10px;
+}
+
+.create_button{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  border: dotted $font-color 1px;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px auto;
+  @include clearfix;
+}
+
+.normal-table{
+  margin: 0 auto;
+  th{
+    border: dotted $font-color 1px;
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+  }
+  td{
+    border: dotted $font-color 1px;
+    padding: 5px;
+  }
+  .small{
+    width: 50px;
+  }
+  .middle{
+    width: 150px;
+  }
+}
+
+.normal-textarea{
+  width: 300px;
+  height: 300px;
+}
+
+.center{
+  text-align: center;
+}
+
+h2{
+  font-size: $title-font-size;
+}
+
+.announcement{
+  border: dotted $font-color 1px;
+  padding: 30px;
+  line-height: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+section{
+  @include clearfix;
+}
+
+.content_box{
+  border: dotted $font-color 1px;
+  padding: 5px;
+  width: 90%;
+}
+
+.topic_list{
+  text-align: center;
+  li{
+    height: 30px;
+  }
+}
+
+.pagination{
+  @include clearfix;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  display: table;
+  li{
+    width: 20px;
+    display: block;
+    float: left;
+  }
+}
+
+.header_user{
+  font-size: 14px;
+  float: right;
+  width: 220px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.success{
+  background-color: #550;
+}
+
+.big-chart{
+  h3{
+    font-size: 20px;
+    text-align: center;
+  }
+  width: 800px;
+  margin: 20px auto;
+}
+
+.messages{
+  padding: 10px;
+  width: 800px;
+  margin: 20px auto;
+  border: dotted $font-color 1px;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+
+.clock{
+  width: 810px;
+  margin: 20px auto;
+  text-align: center;
+  div{
+    @include clearfix;
+    div,p{
+      float: left;
+    }
+
+    p{
+      line-height: 20px;
+      padding: 5px;
+      height: 20px;
+    }
+
+    .total{
+      width: 600px;
+      height: 30px;
+      background-color: #333;
+      .now{
+        background-color: $font-color;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.charts{
+  width: 800px;
+  margin: 0 auto;
+  @include clearfix;
+
+  h2{
+    text-align: center;
+  }
+}
+
+.small-chart{
+  h3{
+    font-size: 20px;
+    text-align: center;
+  }
+  width: 300px;
+  margin: 10px 50px;
+  float: left;
+}
+
+.status{
+  width: 300px;
+  height: 20px;
+  background-color: #333;
+  .now{
+    background-color: $font-color;
+    height: 20px;
+  }
+}
+
+.our_data{
+  width: 800px;
+  margin: 20px auto;
+  @include clearfix;
+  h2{
+    text-align: center;
+  }
+}
+
+.questionnaire-form{
+  width: 700px;
+  margin: 0 auto;
+
+  h3{
+    text-align: center;
+    margin: 20px auto 10px auto;
+  }
+
+  label{
+    width: 250px;
+  }
+}
+
+.solved{
+  background-color: #897700;
+}
+
+.body-area{
+  width: 500px;
+  padding: 10px;
+  border: dotted $font-color 1px;
+  margin: 20px auto;
+}

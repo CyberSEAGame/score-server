@@ -1,0 +1,1 @@
+The contest hasn't started yet.
